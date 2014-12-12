@@ -18,7 +18,6 @@ public class FormatFactory {
 		JAVA_PROPS (JavaPropsFormat.class),
 		JSON (JsonFormat.class),
 		XML (XmlFormat.class),
-		SMILE (SmileFormat.class),
 		JSON_JACKSON (JsonJacksonFormat.class),
 		XML_JAVAX (XmlJavaxFormat.class);
 		

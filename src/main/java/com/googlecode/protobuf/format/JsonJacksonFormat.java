@@ -28,7 +28,13 @@ package com.googlecode.protobuf.format;
 */
 
 
-import static com.googlecode.protobuf.format.util.TextUtils.*;
+import com.google.protobuf.*;
+import com.google.protobuf.Descriptors.Descriptor;
+import com.google.protobuf.Descriptors.EnumDescriptor;
+import com.google.protobuf.Descriptors.EnumValueDescriptor;
+import com.google.protobuf.Descriptors.FieldDescriptor;
+import com.googlecode.protobuf.format.util.TextUtils;
+import org.codehaus.jackson.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,23 +45,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import org.codehaus.jackson.JsonEncoding;
-import org.codehaus.jackson.JsonFactory;
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.JsonParser;
-import org.codehaus.jackson.JsonToken;
-
-import com.google.protobuf.ByteString;
-import com.google.protobuf.Descriptors.Descriptor;
-import com.google.protobuf.Descriptors.EnumDescriptor;
-import com.google.protobuf.Descriptors.EnumValueDescriptor;
-import com.google.protobuf.Descriptors.FieldDescriptor;
-import com.google.protobuf.ExtensionRegistry;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.Message;
-import com.google.protobuf.UnknownFieldSet;
-import com.googlecode.protobuf.format.util.TextUtils;
+import static com.googlecode.protobuf.format.util.TextUtils.unsignedInt;
+import static com.googlecode.protobuf.format.util.TextUtils.unsignedLong;
 
 /**
  * Provide ascii text parsing and formatting support for proto2 instances. The implementation
@@ -72,9 +63,14 @@ import com.googlecode.protobuf.format.util.TextUtils;
  * @author kenton@google.com Kenton Varda
  */
 public class JsonJacksonFormat extends ProtobufFormatter {
-    private static JsonFactory jsonFactory = new JsonFactory();
-	
-		
+    private final JsonFactory jsonFactory;
+    private final JsonJacksonFormatSettings settings;
+
+    public JsonJacksonFormat(JsonJacksonFormatSettings settings) {
+        this.settings = settings;
+        jsonFactory = new JsonFactory();
+    }
+
     /**
      * Outputs a Smile representation of the Protocol Message supplied into the parameter output.
      * (This representation is the new version of the classic "ProtocolPrinter" output from the
@@ -154,7 +150,7 @@ public class JsonJacksonFormat extends ProtobufFormatter {
     	return generator;
     }
 
-    
+
     protected void printMessage(Message message, JsonGenerator generator) throws IOException {
 
         for (Iterator<Map.Entry<FieldDescriptor, Object>> iter = message.getAllFields().entrySet().iterator(); iter.hasNext();) {
@@ -188,7 +184,8 @@ public class JsonJacksonFormat extends ProtobufFormatter {
                 // Groups must be serialized with their original capitalization.
                 generator.writeFieldName(field.getMessageType().getName());
             } else {
-                generator.writeFieldName(field.getName());
+                String fieldName = settings.getPropertyNamingStrategy().nameForField(null, null, field.getName());
+                generator.writeFieldName(fieldName);
             }
         }
 
@@ -260,9 +257,9 @@ public class JsonJacksonFormat extends ProtobufFormatter {
 
             case MESSAGE:
             case GROUP:
-            	generator.writeStartObject();
-                printMessage((Message) value, generator);
-                generator.writeEndObject();
+                String fieldType = field.getMessageType().getFullName();
+                ObjectConverter converter = settings.getConverter(fieldType);
+                converter.convert(this, generator, (Message)value);
                 break;
         }
     }
@@ -562,5 +559,4 @@ public class JsonJacksonFormat extends ProtobufFormatter {
         }
         return subBuilder.build();
     }
-
 }

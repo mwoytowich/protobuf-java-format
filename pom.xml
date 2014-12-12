@@ -47,8 +47,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-smile</artifactId>
-			<version>1.9.7</version>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
 			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
