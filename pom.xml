@@ -3,7 +3,7 @@
 	<groupId>com.googlecode.protobuf-java-format</groupId>
 	<artifactId>protobuf-java-format</artifactId>
 	<name>protobuf-java-format</name>
-	<version>1.4.7</version>
+	<version>1.4.6.1</version>
 	<description>Provide serialization and de-serialization of different formats based on Google’s protobuf Message. Enables overriding the default (byte array) output to text based formats such as XML, JSON and HTML.</description>
 	<url>https://github.com/tteats/protobuf-java-format</url>
 	<packaging>jar</packaging>
@@ -33,13 +33,6 @@
 			</roles>
 		</developer>
 	</developers>
-	<repositories>
-		<repository>
-			<id>exacttarget-public-repository-group</id>
-			<name>ExactTarget Public Maven Repository Group</name>
-			<url>http://etinjavbld1:8081/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
 
 	<dependencies>
 		<dependency>
