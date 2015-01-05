@@ -10,97 +10,241 @@ public final class UnittestMultiNestedProto {
   }
   public interface OuterOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // repeated .protobuf_unittest.Inner one = 1;
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> 
         getOneList();
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.Inner getOne(int index);
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     int getOneCount();
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
         getOneOrBuilderList();
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getOneOrBuilder(
         int index);
-    
+
     // repeated .protobuf_unittest.Inner two = 2;
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> 
         getTwoList();
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.Inner getTwo(int index);
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     int getTwoCount();
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
         getTwoOrBuilderList();
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getTwoOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code protobuf_unittest.Outer}
+   */
   public static final class Outer extends
       com.google.protobuf.GeneratedMessage
       implements OuterOrBuilder {
     // Use Outer.newBuilder() to construct.
-    private Outer(Builder builder) {
+    private Outer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Outer(boolean noInit) {}
-    
+    private Outer(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Outer defaultInstance;
     public static Outer getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Outer getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Outer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                one_ = new java.util.ArrayList<protobuf_unittest.UnittestMultiNestedProto.Inner>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              one_.add(input.readMessage(protobuf_unittest.UnittestMultiNestedProto.Inner.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                two_ = new java.util.ArrayList<protobuf_unittest.UnittestMultiNestedProto.Inner>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              two_.add(input.readMessage(protobuf_unittest.UnittestMultiNestedProto.Inner.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          one_ = java.util.Collections.unmodifiableList(one_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          two_ = java.util.Collections.unmodifiableList(two_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_fieldAccessorTable;
+      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf_unittest.UnittestMultiNestedProto.Outer.class, protobuf_unittest.UnittestMultiNestedProto.Outer.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Outer> PARSER =
+        new com.google.protobuf.AbstractParser<Outer>() {
+      public Outer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Outer(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Outer> getParserForType() {
+      return PARSER;
+    }
+
     // repeated .protobuf_unittest.Inner one = 1;
     public static final int ONE_FIELD_NUMBER = 1;
     private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> one_;
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> getOneList() {
       return one_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
         getOneOrBuilderList() {
       return one_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     public int getOneCount() {
       return one_.size();
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.Inner getOne(int index) {
       return one_.get(index);
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getOneOrBuilder(
         int index) {
       return one_.get(index);
     }
-    
+
     // repeated .protobuf_unittest.Inner two = 2;
     public static final int TWO_FIELD_NUMBER = 2;
     private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> two_;
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> getTwoList() {
       return two_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
         getTwoOrBuilderList() {
       return two_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     public int getTwoCount() {
       return two_.size();
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.Inner getTwo(int index) {
       return two_.get(index);
     }
+    /**
+     * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getTwoOrBuilder(
         int index) {
       return two_.get(index);
     }
-    
+
     private void initFields() {
       one_ = java.util.Collections.emptyList();
       two_ = java.util.Collections.emptyList();
@@ -109,7 +253,7 @@ public final class UnittestMultiNestedProto {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       for (int i = 0; i < getOneCount(); i++) {
         if (!getOne(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -125,7 +269,7 @@ public final class UnittestMultiNestedProto {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -137,12 +281,12 @@ public final class UnittestMultiNestedProto {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < one_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -156,94 +300,83 @@ public final class UnittestMultiNestedProto {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Outer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(protobuf_unittest.UnittestMultiNestedProto.Outer prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code protobuf_unittest.Outer}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements protobuf_unittest.UnittestMultiNestedProto.OuterOrBuilder {
@@ -251,18 +384,21 @@ public final class UnittestMultiNestedProto {
           getDescriptor() {
         return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_fieldAccessorTable;
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf_unittest.UnittestMultiNestedProto.Outer.class, protobuf_unittest.UnittestMultiNestedProto.Outer.Builder.class);
       }
-      
+
       // Construct using protobuf_unittest.UnittestMultiNestedProto.Outer.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -275,7 +411,7 @@ public final class UnittestMultiNestedProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (oneBuilder_ == null) {
@@ -292,20 +428,20 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protobuf_unittest.UnittestMultiNestedProto.Outer.getDescriptor();
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Outer_descriptor;
       }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Outer getDefaultInstanceForType() {
         return protobuf_unittest.UnittestMultiNestedProto.Outer.getDefaultInstance();
       }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Outer build() {
         protobuf_unittest.UnittestMultiNestedProto.Outer result = buildPartial();
         if (!result.isInitialized()) {
@@ -313,17 +449,7 @@ public final class UnittestMultiNestedProto {
         }
         return result;
       }
-      
-      private protobuf_unittest.UnittestMultiNestedProto.Outer buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        protobuf_unittest.UnittestMultiNestedProto.Outer result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Outer buildPartial() {
         protobuf_unittest.UnittestMultiNestedProto.Outer result = new protobuf_unittest.UnittestMultiNestedProto.Outer(this);
         int from_bitField0_ = bitField0_;
@@ -348,7 +474,7 @@ public final class UnittestMultiNestedProto {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof protobuf_unittest.UnittestMultiNestedProto.Outer) {
           return mergeFrom((protobuf_unittest.UnittestMultiNestedProto.Outer)other);
@@ -357,7 +483,7 @@ public final class UnittestMultiNestedProto {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(protobuf_unittest.UnittestMultiNestedProto.Outer other) {
         if (other == protobuf_unittest.UnittestMultiNestedProto.Outer.getDefaultInstance()) return this;
         if (oneBuilder_ == null) {
@@ -415,7 +541,7 @@ public final class UnittestMultiNestedProto {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getOneCount(); i++) {
           if (!getOne(i).isInitialized()) {
@@ -431,48 +557,26 @@ public final class UnittestMultiNestedProto {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              protobuf_unittest.UnittestMultiNestedProto.Inner.Builder subBuilder = protobuf_unittest.UnittestMultiNestedProto.Inner.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addOne(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              protobuf_unittest.UnittestMultiNestedProto.Inner.Builder subBuilder = protobuf_unittest.UnittestMultiNestedProto.Inner.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addTwo(subBuilder.buildPartial());
-              break;
-            }
+        protobuf_unittest.UnittestMultiNestedProto.Outer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf_unittest.UnittestMultiNestedProto.Outer) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
+
       // repeated .protobuf_unittest.Inner one = 1;
       private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> one_ =
         java.util.Collections.emptyList();
@@ -482,10 +586,13 @@ public final class UnittestMultiNestedProto {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           protobuf_unittest.UnittestMultiNestedProto.Inner, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder, protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> oneBuilder_;
-      
+
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> getOneList() {
         if (oneBuilder_ == null) {
           return java.util.Collections.unmodifiableList(one_);
@@ -493,6 +600,9 @@ public final class UnittestMultiNestedProto {
           return oneBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public int getOneCount() {
         if (oneBuilder_ == null) {
           return one_.size();
@@ -500,6 +610,9 @@ public final class UnittestMultiNestedProto {
           return oneBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner getOne(int index) {
         if (oneBuilder_ == null) {
           return one_.get(index);
@@ -507,6 +620,9 @@ public final class UnittestMultiNestedProto {
           return oneBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder setOne(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (oneBuilder_ == null) {
@@ -521,6 +637,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder setOne(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (oneBuilder_ == null) {
@@ -532,6 +651,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder addOne(protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (oneBuilder_ == null) {
           if (value == null) {
@@ -545,6 +667,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder addOne(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (oneBuilder_ == null) {
@@ -559,6 +684,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder addOne(
           protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (oneBuilder_ == null) {
@@ -570,6 +698,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder addOne(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (oneBuilder_ == null) {
@@ -581,6 +712,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder addAllOne(
           java.lang.Iterable<? extends protobuf_unittest.UnittestMultiNestedProto.Inner> values) {
         if (oneBuilder_ == null) {
@@ -592,6 +726,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder clearOne() {
         if (oneBuilder_ == null) {
           one_ = java.util.Collections.emptyList();
@@ -602,6 +739,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public Builder removeOne(int index) {
         if (oneBuilder_ == null) {
           ensureOneIsMutable();
@@ -612,10 +752,16 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder getOneBuilder(
           int index) {
         return getOneFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getOneOrBuilder(
           int index) {
         if (oneBuilder_ == null) {
@@ -623,6 +769,9 @@ public final class UnittestMultiNestedProto {
           return oneBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
            getOneOrBuilderList() {
         if (oneBuilder_ != null) {
@@ -631,15 +780,24 @@ public final class UnittestMultiNestedProto {
           return java.util.Collections.unmodifiableList(one_);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder addOneBuilder() {
         return getOneFieldBuilder().addBuilder(
             protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder addOneBuilder(
           int index) {
         return getOneFieldBuilder().addBuilder(
             index, protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner one = 1;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner.Builder> 
            getOneBuilderList() {
         return getOneFieldBuilder().getBuilderList();
@@ -658,7 +816,7 @@ public final class UnittestMultiNestedProto {
         }
         return oneBuilder_;
       }
-      
+
       // repeated .protobuf_unittest.Inner two = 2;
       private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> two_ =
         java.util.Collections.emptyList();
@@ -668,10 +826,13 @@ public final class UnittestMultiNestedProto {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           protobuf_unittest.UnittestMultiNestedProto.Inner, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder, protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> twoBuilder_;
-      
+
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner> getTwoList() {
         if (twoBuilder_ == null) {
           return java.util.Collections.unmodifiableList(two_);
@@ -679,6 +840,9 @@ public final class UnittestMultiNestedProto {
           return twoBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public int getTwoCount() {
         if (twoBuilder_ == null) {
           return two_.size();
@@ -686,6 +850,9 @@ public final class UnittestMultiNestedProto {
           return twoBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner getTwo(int index) {
         if (twoBuilder_ == null) {
           return two_.get(index);
@@ -693,6 +860,9 @@ public final class UnittestMultiNestedProto {
           return twoBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder setTwo(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (twoBuilder_ == null) {
@@ -707,6 +877,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder setTwo(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (twoBuilder_ == null) {
@@ -718,6 +891,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder addTwo(protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (twoBuilder_ == null) {
           if (value == null) {
@@ -731,6 +907,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder addTwo(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner value) {
         if (twoBuilder_ == null) {
@@ -745,6 +924,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder addTwo(
           protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (twoBuilder_ == null) {
@@ -756,6 +938,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder addTwo(
           int index, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder builderForValue) {
         if (twoBuilder_ == null) {
@@ -767,6 +952,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder addAllTwo(
           java.lang.Iterable<? extends protobuf_unittest.UnittestMultiNestedProto.Inner> values) {
         if (twoBuilder_ == null) {
@@ -778,6 +966,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder clearTwo() {
         if (twoBuilder_ == null) {
           two_ = java.util.Collections.emptyList();
@@ -788,6 +979,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public Builder removeTwo(int index) {
         if (twoBuilder_ == null) {
           ensureTwoIsMutable();
@@ -798,10 +992,16 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder getTwoBuilder(
           int index) {
         return getTwoFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder getTwoOrBuilder(
           int index) {
         if (twoBuilder_ == null) {
@@ -809,6 +1009,9 @@ public final class UnittestMultiNestedProto {
           return twoBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder> 
            getTwoOrBuilderList() {
         if (twoBuilder_ != null) {
@@ -817,15 +1020,24 @@ public final class UnittestMultiNestedProto {
           return java.util.Collections.unmodifiableList(two_);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder addTwoBuilder() {
         return getTwoFieldBuilder().addBuilder(
             protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Inner.Builder addTwoBuilder(
           int index) {
         return getTwoFieldBuilder().addBuilder(
             index, protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Inner two = 2;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Inner.Builder> 
            getTwoBuilderList() {
         return getTwoFieldBuilder().getBuilderList();
@@ -844,111 +1056,255 @@ public final class UnittestMultiNestedProto {
         }
         return twoBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:protobuf_unittest.Outer)
     }
-    
+
     static {
       defaultInstance = new Outer(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:protobuf_unittest.Outer)
   }
-  
+
   public interface InnerOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // repeated .protobuf_unittest.Holder data1 = 1;
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> 
         getData1List();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.Holder getData1(int index);
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     int getData1Count();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
         getData1OrBuilderList();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData1OrBuilder(
         int index);
-    
+
     // repeated .protobuf_unittest.Holder data2 = 2;
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> 
         getData2List();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.Holder getData2(int index);
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     int getData2Count();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
         getData2OrBuilderList();
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData2OrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code protobuf_unittest.Inner}
+   */
   public static final class Inner extends
       com.google.protobuf.GeneratedMessage
       implements InnerOrBuilder {
     // Use Inner.newBuilder() to construct.
-    private Inner(Builder builder) {
+    private Inner(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Inner(boolean noInit) {}
-    
+    private Inner(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Inner defaultInstance;
     public static Inner getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Inner getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Inner(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                data1_ = new java.util.ArrayList<protobuf_unittest.UnittestMultiNestedProto.Holder>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              data1_.add(input.readMessage(protobuf_unittest.UnittestMultiNestedProto.Holder.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                data2_ = new java.util.ArrayList<protobuf_unittest.UnittestMultiNestedProto.Holder>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              data2_.add(input.readMessage(protobuf_unittest.UnittestMultiNestedProto.Holder.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          data1_ = java.util.Collections.unmodifiableList(data1_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          data2_ = java.util.Collections.unmodifiableList(data2_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_fieldAccessorTable;
+      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf_unittest.UnittestMultiNestedProto.Inner.class, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Inner> PARSER =
+        new com.google.protobuf.AbstractParser<Inner>() {
+      public Inner parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Inner(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Inner> getParserForType() {
+      return PARSER;
+    }
+
     // repeated .protobuf_unittest.Holder data1 = 1;
     public static final int DATA1_FIELD_NUMBER = 1;
     private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> data1_;
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> getData1List() {
       return data1_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
         getData1OrBuilderList() {
       return data1_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     public int getData1Count() {
       return data1_.size();
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.Holder getData1(int index) {
       return data1_.get(index);
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData1OrBuilder(
         int index) {
       return data1_.get(index);
     }
-    
+
     // repeated .protobuf_unittest.Holder data2 = 2;
     public static final int DATA2_FIELD_NUMBER = 2;
     private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> data2_;
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> getData2List() {
       return data2_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
         getData2OrBuilderList() {
       return data2_;
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     public int getData2Count() {
       return data2_.size();
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.Holder getData2(int index) {
       return data2_.get(index);
     }
+    /**
+     * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+     */
     public protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData2OrBuilder(
         int index) {
       return data2_.get(index);
     }
-    
+
     private void initFields() {
       data1_ = java.util.Collections.emptyList();
       data2_ = java.util.Collections.emptyList();
@@ -957,7 +1313,7 @@ public final class UnittestMultiNestedProto {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       for (int i = 0; i < getData1Count(); i++) {
         if (!getData1(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -973,7 +1329,7 @@ public final class UnittestMultiNestedProto {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -985,12 +1341,12 @@ public final class UnittestMultiNestedProto {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < data1_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -1004,94 +1360,83 @@ public final class UnittestMultiNestedProto {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static protobuf_unittest.UnittestMultiNestedProto.Inner parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(protobuf_unittest.UnittestMultiNestedProto.Inner prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code protobuf_unittest.Inner}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements protobuf_unittest.UnittestMultiNestedProto.InnerOrBuilder {
@@ -1099,18 +1444,21 @@ public final class UnittestMultiNestedProto {
           getDescriptor() {
         return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_fieldAccessorTable;
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf_unittest.UnittestMultiNestedProto.Inner.class, protobuf_unittest.UnittestMultiNestedProto.Inner.Builder.class);
       }
-      
+
       // Construct using protobuf_unittest.UnittestMultiNestedProto.Inner.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1123,7 +1471,7 @@ public final class UnittestMultiNestedProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (data1Builder_ == null) {
@@ -1140,20 +1488,20 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protobuf_unittest.UnittestMultiNestedProto.Inner.getDescriptor();
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Inner_descriptor;
       }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Inner getDefaultInstanceForType() {
         return protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance();
       }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Inner build() {
         protobuf_unittest.UnittestMultiNestedProto.Inner result = buildPartial();
         if (!result.isInitialized()) {
@@ -1161,17 +1509,7 @@ public final class UnittestMultiNestedProto {
         }
         return result;
       }
-      
-      private protobuf_unittest.UnittestMultiNestedProto.Inner buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        protobuf_unittest.UnittestMultiNestedProto.Inner result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public protobuf_unittest.UnittestMultiNestedProto.Inner buildPartial() {
         protobuf_unittest.UnittestMultiNestedProto.Inner result = new protobuf_unittest.UnittestMultiNestedProto.Inner(this);
         int from_bitField0_ = bitField0_;
@@ -1196,7 +1534,7 @@ public final class UnittestMultiNestedProto {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof protobuf_unittest.UnittestMultiNestedProto.Inner) {
           return mergeFrom((protobuf_unittest.UnittestMultiNestedProto.Inner)other);
@@ -1205,7 +1543,7 @@ public final class UnittestMultiNestedProto {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(protobuf_unittest.UnittestMultiNestedProto.Inner other) {
         if (other == protobuf_unittest.UnittestMultiNestedProto.Inner.getDefaultInstance()) return this;
         if (data1Builder_ == null) {
@@ -1263,7 +1601,7 @@ public final class UnittestMultiNestedProto {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getData1Count(); i++) {
           if (!getData1(i).isInitialized()) {
@@ -1279,48 +1617,26 @@ public final class UnittestMultiNestedProto {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              protobuf_unittest.UnittestMultiNestedProto.Holder.Builder subBuilder = protobuf_unittest.UnittestMultiNestedProto.Holder.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addData1(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              protobuf_unittest.UnittestMultiNestedProto.Holder.Builder subBuilder = protobuf_unittest.UnittestMultiNestedProto.Holder.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addData2(subBuilder.buildPartial());
-              break;
-            }
+        protobuf_unittest.UnittestMultiNestedProto.Inner parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf_unittest.UnittestMultiNestedProto.Inner) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
+
       // repeated .protobuf_unittest.Holder data1 = 1;
       private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> data1_ =
         java.util.Collections.emptyList();
@@ -1330,10 +1646,13 @@ public final class UnittestMultiNestedProto {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           protobuf_unittest.UnittestMultiNestedProto.Holder, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder, protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> data1Builder_;
-      
+
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> getData1List() {
         if (data1Builder_ == null) {
           return java.util.Collections.unmodifiableList(data1_);
@@ -1341,6 +1660,9 @@ public final class UnittestMultiNestedProto {
           return data1Builder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public int getData1Count() {
         if (data1Builder_ == null) {
           return data1_.size();
@@ -1348,6 +1670,9 @@ public final class UnittestMultiNestedProto {
           return data1Builder_.getCount();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder getData1(int index) {
         if (data1Builder_ == null) {
           return data1_.get(index);
@@ -1355,6 +1680,9 @@ public final class UnittestMultiNestedProto {
           return data1Builder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder setData1(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data1Builder_ == null) {
@@ -1369,6 +1697,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder setData1(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data1Builder_ == null) {
@@ -1380,6 +1711,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder addData1(protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data1Builder_ == null) {
           if (value == null) {
@@ -1393,6 +1727,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder addData1(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data1Builder_ == null) {
@@ -1407,6 +1744,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder addData1(
           protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data1Builder_ == null) {
@@ -1418,6 +1758,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder addData1(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data1Builder_ == null) {
@@ -1429,6 +1772,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder addAllData1(
           java.lang.Iterable<? extends protobuf_unittest.UnittestMultiNestedProto.Holder> values) {
         if (data1Builder_ == null) {
@@ -1440,6 +1786,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder clearData1() {
         if (data1Builder_ == null) {
           data1_ = java.util.Collections.emptyList();
@@ -1450,6 +1799,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public Builder removeData1(int index) {
         if (data1Builder_ == null) {
           ensureData1IsMutable();
@@ -1460,10 +1812,16 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder getData1Builder(
           int index) {
         return getData1FieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData1OrBuilder(
           int index) {
         if (data1Builder_ == null) {
@@ -1471,6 +1829,9 @@ public final class UnittestMultiNestedProto {
           return data1Builder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
            getData1OrBuilderList() {
         if (data1Builder_ != null) {
@@ -1479,15 +1840,24 @@ public final class UnittestMultiNestedProto {
           return java.util.Collections.unmodifiableList(data1_);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder addData1Builder() {
         return getData1FieldBuilder().addBuilder(
             protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder addData1Builder(
           int index) {
         return getData1FieldBuilder().addBuilder(
             index, protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data1 = 1;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder.Builder> 
            getData1BuilderList() {
         return getData1FieldBuilder().getBuilderList();
@@ -1506,7 +1876,7 @@ public final class UnittestMultiNestedProto {
         }
         return data1Builder_;
       }
-      
+
       // repeated .protobuf_unittest.Holder data2 = 2;
       private java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> data2_ =
         java.util.Collections.emptyList();
@@ -1516,10 +1886,13 @@ public final class UnittestMultiNestedProto {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           protobuf_unittest.UnittestMultiNestedProto.Holder, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder, protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> data2Builder_;
-      
+
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder> getData2List() {
         if (data2Builder_ == null) {
           return java.util.Collections.unmodifiableList(data2_);
@@ -1527,6 +1900,9 @@ public final class UnittestMultiNestedProto {
           return data2Builder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public int getData2Count() {
         if (data2Builder_ == null) {
           return data2_.size();
@@ -1534,6 +1910,9 @@ public final class UnittestMultiNestedProto {
           return data2Builder_.getCount();
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder getData2(int index) {
         if (data2Builder_ == null) {
           return data2_.get(index);
@@ -1541,6 +1920,9 @@ public final class UnittestMultiNestedProto {
           return data2Builder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder setData2(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data2Builder_ == null) {
@@ -1555,6 +1937,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder setData2(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data2Builder_ == null) {
@@ -1566,6 +1951,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder addData2(protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data2Builder_ == null) {
           if (value == null) {
@@ -1579,6 +1967,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder addData2(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder value) {
         if (data2Builder_ == null) {
@@ -1593,6 +1984,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder addData2(
           protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data2Builder_ == null) {
@@ -1604,6 +1998,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder addData2(
           int index, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder builderForValue) {
         if (data2Builder_ == null) {
@@ -1615,6 +2012,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder addAllData2(
           java.lang.Iterable<? extends protobuf_unittest.UnittestMultiNestedProto.Holder> values) {
         if (data2Builder_ == null) {
@@ -1626,6 +2026,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder clearData2() {
         if (data2Builder_ == null) {
           data2_ = java.util.Collections.emptyList();
@@ -1636,6 +2039,9 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public Builder removeData2(int index) {
         if (data2Builder_ == null) {
           ensureData2IsMutable();
@@ -1646,10 +2052,16 @@ public final class UnittestMultiNestedProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder getData2Builder(
           int index) {
         return getData2FieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder getData2OrBuilder(
           int index) {
         if (data2Builder_ == null) {
@@ -1657,6 +2069,9 @@ public final class UnittestMultiNestedProto {
           return data2Builder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public java.util.List<? extends protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder> 
            getData2OrBuilderList() {
         if (data2Builder_ != null) {
@@ -1665,15 +2080,24 @@ public final class UnittestMultiNestedProto {
           return java.util.Collections.unmodifiableList(data2_);
         }
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder addData2Builder() {
         return getData2FieldBuilder().addBuilder(
             protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public protobuf_unittest.UnittestMultiNestedProto.Holder.Builder addData2Builder(
           int index) {
         return getData2FieldBuilder().addBuilder(
             index, protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance());
       }
+      /**
+       * <code>repeated .protobuf_unittest.Holder data2 = 2;</code>
+       */
       public java.util.List<protobuf_unittest.UnittestMultiNestedProto.Holder.Builder> 
            getData2BuilderList() {
         return getData2FieldBuilder().getBuilderList();
@@ -1692,446 +2116,114 @@ public final class UnittestMultiNestedProto {
         }
         return data2Builder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:protobuf_unittest.Inner)
     }
-    
+
     static {
       defaultInstance = new Inner(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:protobuf_unittest.Inner)
   }
-  
+
   public interface HolderOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // required string id = 1;
+    /**
+     * <code>required string id = 1;</code>
+     */
     boolean hasId();
-    String getId();
-    
+    /**
+     * <code>required string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>required string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
     // optional string rev = 2;
+    /**
+     * <code>optional string rev = 2;</code>
+     */
     boolean hasRev();
-    String getRev();
-    
+    /**
+     * <code>optional string rev = 2;</code>
+     */
+    java.lang.String getRev();
+    /**
+     * <code>optional string rev = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getRevBytes();
+
     // optional string data = 3;
+    /**
+     * <code>optional string data = 3;</code>
+     */
     boolean hasData();
-    String getData();
+    /**
+     * <code>optional string data = 3;</code>
+     */
+    java.lang.String getData();
+    /**
+     * <code>optional string data = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
   }
+  /**
+   * Protobuf type {@code protobuf_unittest.Holder}
+   */
   public static final class Holder extends
       com.google.protobuf.GeneratedMessage
       implements HolderOrBuilder {
     // Use Holder.newBuilder() to construct.
-    private Holder(Builder builder) {
+    private Holder(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Holder(boolean noInit) {}
-    
+    private Holder(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Holder defaultInstance;
     public static Holder getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Holder getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required string id = 1;
-    public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.Object id_;
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          id_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // optional string rev = 2;
-    public static final int REV_FIELD_NUMBER = 2;
-    private java.lang.Object rev_;
-    public boolean hasRev() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public String getRev() {
-      java.lang.Object ref = rev_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          rev_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getRevBytes() {
-      java.lang.Object ref = rev_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        rev_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // optional string data = 3;
-    public static final int DATA_FIELD_NUMBER = 3;
-    private java.lang.Object data_;
-    public boolean hasData() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    public String getData() {
-      java.lang.Object ref = data_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          data_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getDataBytes() {
-      java.lang.Object ref = data_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        data_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    private void initFields() {
-      id_ = "";
-      rev_ = "";
-      data_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getRevBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getDataBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getRevBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getDataBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+    private Holder(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(protobuf_unittest.UnittestMultiNestedProto.Holder prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_fieldAccessorTable;
-      }
-      
-      // Construct using protobuf_unittest.UnittestMultiNestedProto.Holder.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        rev_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        data_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return protobuf_unittest.UnittestMultiNestedProto.Holder.getDescriptor();
-      }
-      
-      public protobuf_unittest.UnittestMultiNestedProto.Holder getDefaultInstanceForType() {
-        return protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance();
-      }
-      
-      public protobuf_unittest.UnittestMultiNestedProto.Holder build() {
-        protobuf_unittest.UnittestMultiNestedProto.Holder result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private protobuf_unittest.UnittestMultiNestedProto.Holder buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        protobuf_unittest.UnittestMultiNestedProto.Holder result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public protobuf_unittest.UnittestMultiNestedProto.Holder buildPartial() {
-        protobuf_unittest.UnittestMultiNestedProto.Holder result = new protobuf_unittest.UnittestMultiNestedProto.Holder(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.id_ = id_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.rev_ = rev_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.data_ = data_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protobuf_unittest.UnittestMultiNestedProto.Holder) {
-          return mergeFrom((protobuf_unittest.UnittestMultiNestedProto.Holder)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(protobuf_unittest.UnittestMultiNestedProto.Holder other) {
-        if (other == protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          setId(other.getId());
-        }
-        if (other.hasRev()) {
-          setRev(other.getRev());
-        }
-        if (other.hasData()) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasId()) {
-          
-          return false;
-        }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -2152,26 +2244,491 @@ public final class UnittestMultiNestedProto {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              protobuf_unittest.UnittestMultiNestedProto.Holder.class, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Holder> PARSER =
+        new com.google.protobuf.AbstractParser<Holder>() {
+      public Holder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Holder(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Holder> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string id = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.Object id_;
+    /**
+     * <code>required string id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string rev = 2;
+    public static final int REV_FIELD_NUMBER = 2;
+    private java.lang.Object rev_;
+    /**
+     * <code>optional string rev = 2;</code>
+     */
+    public boolean hasRev() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string rev = 2;</code>
+     */
+    public java.lang.String getRev() {
+      java.lang.Object ref = rev_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          rev_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string rev = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRevBytes() {
+      java.lang.Object ref = rev_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rev_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string data = 3;
+    public static final int DATA_FIELD_NUMBER = 3;
+    private java.lang.Object data_;
+    /**
+     * <code>optional string data = 3;</code>
+     */
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string data = 3;</code>
+     */
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          data_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string data = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      id_ = "";
+      rev_ = "";
+      data_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getRevBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getDataBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getRevBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getDataBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static protobuf_unittest.UnittestMultiNestedProto.Holder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(protobuf_unittest.UnittestMultiNestedProto.Holder prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf_unittest.Holder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements protobuf_unittest.UnittestMultiNestedProto.HolderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                protobuf_unittest.UnittestMultiNestedProto.Holder.class, protobuf_unittest.UnittestMultiNestedProto.Holder.Builder.class);
+      }
+
+      // Construct using protobuf_unittest.UnittestMultiNestedProto.Holder.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rev_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return protobuf_unittest.UnittestMultiNestedProto.internal_static_protobuf_unittest_Holder_descriptor;
+      }
+
+      public protobuf_unittest.UnittestMultiNestedProto.Holder getDefaultInstanceForType() {
+        return protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance();
+      }
+
+      public protobuf_unittest.UnittestMultiNestedProto.Holder build() {
+        protobuf_unittest.UnittestMultiNestedProto.Holder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public protobuf_unittest.UnittestMultiNestedProto.Holder buildPartial() {
+        protobuf_unittest.UnittestMultiNestedProto.Holder result = new protobuf_unittest.UnittestMultiNestedProto.Holder(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.rev_ = rev_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.data_ = data_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof protobuf_unittest.UnittestMultiNestedProto.Holder) {
+          return mergeFrom((protobuf_unittest.UnittestMultiNestedProto.Holder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(protobuf_unittest.UnittestMultiNestedProto.Holder other) {
+        if (other == protobuf_unittest.UnittestMultiNestedProto.Holder.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasRev()) {
+          bitField0_ |= 0x00000002;
+          rev_ = other.rev_;
+          onChanged();
+        }
+        if (other.hasData()) {
+          bitField0_ |= 0x00000004;
+          data_ = other.data_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        protobuf_unittest.UnittestMultiNestedProto.Holder parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (protobuf_unittest.UnittestMultiNestedProto.Holder) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
+
       // required string id = 1;
       private java.lang.Object id_ = "";
+      /**
+       * <code>required string id = 1;</code>
+       */
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getId() {
+      /**
+       * <code>required string id = 1;</code>
+       */
+      public java.lang.String getId() {
         java.lang.Object ref = id_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           id_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setId(String value) {
+      /**
+       * <code>required string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2180,34 +2737,72 @@ public final class UnittestMultiNestedProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>required string id = 1;</code>
+       */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
-      void setId(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>required string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         id_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string rev = 2;
       private java.lang.Object rev_ = "";
+      /**
+       * <code>optional string rev = 2;</code>
+       */
       public boolean hasRev() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getRev() {
+      /**
+       * <code>optional string rev = 2;</code>
+       */
+      public java.lang.String getRev() {
         java.lang.Object ref = rev_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           rev_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setRev(String value) {
+      /**
+       * <code>optional string rev = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRevBytes() {
+        java.lang.Object ref = rev_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rev_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string rev = 2;</code>
+       */
+      public Builder setRev(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2216,34 +2811,72 @@ public final class UnittestMultiNestedProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string rev = 2;</code>
+       */
       public Builder clearRev() {
         bitField0_ = (bitField0_ & ~0x00000002);
         rev_ = getDefaultInstance().getRev();
         onChanged();
         return this;
       }
-      void setRev(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string rev = 2;</code>
+       */
+      public Builder setRevBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         rev_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string data = 3;
       private java.lang.Object data_ = "";
+      /**
+       * <code>optional string data = 3;</code>
+       */
       public boolean hasData() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getData() {
+      /**
+       * <code>optional string data = 3;</code>
+       */
+      public java.lang.String getData() {
         java.lang.Object ref = data_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           data_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setData(String value) {
+      /**
+       * <code>optional string data = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string data = 3;</code>
+       */
+      public Builder setData(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2252,29 +2885,40 @@ public final class UnittestMultiNestedProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string data = 3;</code>
+       */
       public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000004);
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
       }
-      void setData(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string data = 3;</code>
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         data_ = value;
         onChanged();
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:protobuf_unittest.Holder)
     }
-    
+
     static {
       defaultInstance = new Holder(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:protobuf_unittest.Holder)
   }
-  
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_protobuf_unittest_Outer_descriptor;
   private static
@@ -2290,7 +2934,7 @@ public final class UnittestMultiNestedProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_protobuf_unittest_Holder_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -2318,25 +2962,19 @@ public final class UnittestMultiNestedProto {
           internal_static_protobuf_unittest_Outer_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protobuf_unittest_Outer_descriptor,
-              new java.lang.String[] { "One", "Two", },
-              protobuf_unittest.UnittestMultiNestedProto.Outer.class,
-              protobuf_unittest.UnittestMultiNestedProto.Outer.Builder.class);
+              new java.lang.String[] { "One", "Two", });
           internal_static_protobuf_unittest_Inner_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_protobuf_unittest_Inner_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protobuf_unittest_Inner_descriptor,
-              new java.lang.String[] { "Data1", "Data2", },
-              protobuf_unittest.UnittestMultiNestedProto.Inner.class,
-              protobuf_unittest.UnittestMultiNestedProto.Inner.Builder.class);
+              new java.lang.String[] { "Data1", "Data2", });
           internal_static_protobuf_unittest_Holder_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_protobuf_unittest_Holder_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protobuf_unittest_Holder_descriptor,
-              new java.lang.String[] { "Id", "Rev", "Data", },
-              protobuf_unittest.UnittestMultiNestedProto.Holder.class,
-              protobuf_unittest.UnittestMultiNestedProto.Holder.Builder.class);
+              new java.lang.String[] { "Id", "Rev", "Data", });
           return null;
         }
       };
@@ -2345,6 +2983,6 @@ public final class UnittestMultiNestedProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

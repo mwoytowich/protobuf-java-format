@@ -61,6 +61,10 @@ public class JsonJacksonFormatSettings {
         this.propertyNamingStrategy = propertyNamingStrategy;
     }
 
+    public JsonJacksonFormatSettings() {
+        this(new CamelCaseStrategy());
+    }
+
     private static class DefaultObjectConverter implements ObjectConverter {
 
         @Override
