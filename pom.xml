@@ -3,9 +3,9 @@
 	<groupId>com.googlecode.protobuf-java-format</groupId>
 	<artifactId>protobuf-java-format</artifactId>
 	<name>protobuf-java-format</name>
-	<version>1.4.6.1</version>
+	<version>1.4.6.2</version>
 	<description>Provide serialization and de-serialization of different formats based on Google’s protobuf Message. Enables overriding the default (byte array) output to text based formats such as XML, JSON and HTML.</description>
-	<url>https://github.com/tteats/protobuf-java-format</url>
+	<url>https://github.com/mwoytowich/protobuf-java-format</url>
 	<packaging>jar</packaging>
 	<scm>
 		<connection>scm:svn:https://protobuf-java-format.googlecode.com/svn/trunk/</connection>
@@ -33,18 +33,21 @@
 			</roles>
 		</developer>
 	</developers>
-
+    <properties>
+      <protobuf.version>2.6.1</protobuf.version>  
+      <jackson.version>1.9.13</jackson.version>  
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
-			<version>2.5.0</version>
+			<version>${protobuf.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
+			<version>${jackson.version}</version>
 			<scope>provided</scope>
 			<optional>true</optional>
 		</dependency>
@@ -62,14 +65,15 @@
 		</dependency>
 	</dependencies>
 	<build>
+	<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
@@ -128,6 +132,7 @@
 				</executions>
 			</plugin>
 		</plugins>
+</pluginManagement>		
 	</build>
 	<profiles>
 		<profile>
