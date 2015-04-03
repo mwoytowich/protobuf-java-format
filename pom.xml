@@ -39,19 +39,19 @@
 	<repositories>
 		<repository>
 			<id>bluespiral</id>
-			<url>s3://bluespiral.maven.repository</url>
+			<url>s3://bluespiral.maven.repository.public</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>bluespiral-release</id>
+			<id>bluespiral-public-release</id>
 			<name>Blue Spiral Release Repository</name>
-			<url>s3://bluespiral.maven.repository/release</url>
+			<url>s3://bluespiral.maven.repository.public/release</url>
 		</repository>
 		<snapshotRepository>
-			<id>bluespiral-snapshot</id>
+			<id>bluespiral-public-snapshot</id>
 			<name>Blue Spiral Snapshot Repository</name>
-			<url>s3://bluespiral.maven.repository/snapshot</url>
+			<url>s3://bluespiral.maven.repository.public/snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
 
